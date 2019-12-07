@@ -1,6 +1,6 @@
 {
   "name": "curso-angular4-webapp",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -22,7 +22,7 @@
     "@angular/router": "^4.0.0",
     "core-js": "^2.4.1",
     "rxjs": "^5.1.0",
-    "zone.js": "^0.8.4"
+    "zone.js": "^0.7.8"
   },
   "devDependencies": {
     "@angular/cli": "1.0.0",
@@ -42,5 +42,19 @@
     "ts-node": "~2.0.0",
     "tslint": "~4.5.0",
     "typescript": "~2.2.0"
-  }
+  },
+  "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.",
+  "main": "karma.conf.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adrianqac/angular-front-end.git"
+  },
+  "keywords": [
+    "*"
+  ],
+  "author": "Adrian Vazquez",
+  "bugs": {
+    "url": "https://github.com/adrianqac/angular-front-end/issues"
+  },
+  "homepage": "https://github.com/adrianqac/angular-front-end#readme"
 }

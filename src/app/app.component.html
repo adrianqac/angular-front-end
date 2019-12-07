@@ -1,3 +1,25 @@
-<h1>
-  {{title}}
-</h1>
+<div id="content" class="col-lg-10 col-lg-offset-1">
+	<header id="header" class="col-lg-12" [style.background]="header_color">
+		<h1>
+		  {{title}}
+		</h1>
+	</header>
+
+		<nav id="nav" class="col-lg-12" *ngIf="_userService.getUserLoggedIn()">
+		<ul>
+			<li><a [routerLink]="['/home']" [routerLinkActive]="['activado']">Home</a></li>
+			<li><a [routerLink]="['/proyectos']" [routerLinkActive]="['activado']">Proyectos</a></li>
+			<li><a *ngIf="_userService.isLoggedAdmin() == 'true'" [routerLink]="['/nuevo-proyecto']" [routerLinkActive]="['activado']">Nuevo proyecto</a></li>
+			<li><a (click)="cerrarSesion()">Cerrar sesión</a></li>
+		</ul>
+	</nav>
+
+	<section id="main" class="col-lg-12">
+		<!-- Componente actual -->
+		<router-outlet></router-outlet>
+	</section>
+
+	<footer id="footer" class="col-lg-12">
+		<p>Angular 4 - Rubén Adrián Vázquez Calzada</p>
+	</footer>
+</div>

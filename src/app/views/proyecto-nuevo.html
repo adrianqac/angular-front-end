@@ -1,0 +1,28 @@
+<h3>{{titulo}}</h3>
+<hr/>
+
+<form #formProducto="ngForm" (ngSubmit)="onSubmit()" class="col-lg-6" id="form-proyecto">
+
+	<label>
+		Nombre del Proyecto
+		<span *ngIf="!nombre.valid && nombre.touched" class="label label-danger">El nombre es obligatorio</span>
+	</label>
+	<input type="text" #nombre="ngModel" name="nombre" [(ngModel)]="proyecto.nombre" class="form-control" required />
+
+	<br/>
+	<label>
+		Project Manager
+		<span *ngIf="!pm.valid && pm.touched" class="label label-danger">El Project Manager es obligatorio</span>
+	</label>
+	<input type="text" #pm="ngModel" name="pm" [(ngModel)]="proyecto.projectManager" class="form-control" required />
+
+	<br/>
+	<label>
+		Descripción
+		<span *ngIf="!descripcion.valid && descripcion.touched" class="label label-danger">La descripción es obligatorio</span>
+	</label>
+	<textarea #descripcion="ngModel" name="descripcion" [(ngModel)]="proyecto.descripcion" class="form-control" required></textarea>
+
+	<br/>
+	<input type="submit" value="{{titulo}}" [disabled]="!formProducto.form.valid" class="btn btn-success"/>
+</form>
